@@ -6,6 +6,8 @@ import { Hono } from 'hono';
 import { routePath } from 'hono/route';
 
 import { config } from '@/config';
+import { createFeedHandler, deleteFeedHandler, listFeedsHandler } from '@/routes/admin/api';
+import adminUI from '@/routes/admin/ui';
 import healthz from '@/routes/healthz';
 import index from '@/routes/index';
 import metrics from '@/routes/metrics';
@@ -257,6 +259,10 @@ for (const namespace in namespaces) {
 
 app.get('/', index);
 app.get('/healthz', healthz);
+app.get('/admin', adminUI);
+app.get('/api/gamenews/feeds', listFeedsHandler);
+app.post('/api/gamenews/feeds', createFeedHandler);
+app.delete('/api/gamenews/feeds/:slug', deleteFeedHandler);
 app.get('/robots.txt', robotstxt);
 if (config.debugInfo !== 'false') {
     // Only enable tracing in debug mode
