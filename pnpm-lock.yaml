@@ -176,8 +176,8 @@ importers:
         specifier: 1.5.0
         version: 1.5.0
       mailparser:
-        specifier: 3.9.6
-        version: 3.9.6
+        specifier: 3.9.8
+        version: 3.9.8
       markdown-it:
         specifier: 14.1.1
         version: 14.1.1
@@ -2991,6 +2991,7 @@ packages:
   basic-ftp@5.2.0:
     resolution: {integrity: sha512-VoMINM2rqJwJgfdHq6RiUudKt2BV+FY5ZFezP/ypmwayk68+NzzAQy4XXLlqsGD4MCzq3DrmNFD/uUmBJuGoXw==}
     engines: {node: '>=10.0.0'}
+    deprecated: Security vulnerability fixed in 5.2.1, please upgrade
 
   bcrypt-pbkdf@1.0.2:
     resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==}
@@ -4425,6 +4426,9 @@ packages:
   libmime@5.3.7:
     resolution: {integrity: sha512-FlDb3Wtha8P01kTL3P9M+ZDNDWPKPmKHWaU/cG/lg5pfuAwdflVpZE+wm9m7pKmC5ww6s+zTxBKS1p6yl3KpSw==}
 
+  libmime@5.3.8:
+    resolution: {integrity: sha512-ZrCY+Q66mPvasAfjsQ/IgahzoBvfE1VdtGRpo1hwRB1oK3wJKxhKA3GOcd2a6j7AH5eMFccxK9fBoCpRZTf8ng==}
+
   libqp@2.1.1:
     resolution: {integrity: sha512-0Wd+GPz1O134cP62YU2GTOPNA7Qgl09XwCqM5zpBv87ERCXdfDtyKXvV7c9U22yWJh44QZqBocFnXN11K96qow==}
 
@@ -4505,8 +4509,8 @@ packages:
   magicast@0.5.2:
     resolution: {integrity: sha512-E3ZJh4J3S9KfwdjZhe2afj6R9lGIN5Pher1pF39UGrXRqq/VDaGVIGN13BjHd2u8B61hArAGOnso7nBOouW3TQ==}
 
-  mailparser@3.9.6:
-    resolution: {integrity: sha512-EJYTDWMrOS1kddK1mTsRkrx2Ngh2nYsg54SRMWVVWGVEGbHH4tod8tqqU9hIRPgGQVboSjFubDn9cboSitbM3Q==}
+  mailparser@3.9.8:
+    resolution: {integrity: sha512-7jSlFGXiianVnhnb6wdutJFloD34488nrHY7r6FNqwXAhZ7YiJDYrKKTxZJ0oSrXcAPHm8YoYnh97xyGtrBQ3w==}
 
   make-dir@4.0.0:
     resolution: {integrity: sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==}
@@ -4769,12 +4773,12 @@ packages:
   node-releases@2.0.36:
     resolution: {integrity: sha512-TdC8FSgHz8Mwtw9g5L4gR/Sh9XhSP/0DEkQxfEFXOpiul5IiHgHan2VhYYb6agDSfp4KuvltmGApc8HMgUrIkA==}
 
-  nodemailer@8.0.3:
-    resolution: {integrity: sha512-JQNBqvK+bj3NMhUFR3wmCl3SYcOeMotDiwDBvIoCuQdF0PvlIY0BH+FJ2CG7u4cXKPChplE78oowlH/Otsc4ZQ==}
-    engines: {node: '>=6.0.0'}
-
   nodemailer@8.0.4:
     resolution: {integrity: sha512-k+jf6N8PfQJ0Fe8ZhJlgqU5qJU44Lpvp2yvidH3vp1lPnVQMgi4yEEMPXg5eJS1gFIJTVq1NHBk7Ia9ARdSBdQ==}
+    engines: {node: '>=6.0.0'}
+
+  nodemailer@8.0.5:
+    resolution: {integrity: sha512-0PF8Yb1yZuQfQbq+5/pZJrtF6WQcjTd5/S4JOHs9PGFxuTqoB/icwuB44pOdURHJbRKX1PPoJZtY7R4VUoCC8w==}
     engines: {node: '>=6.0.0'}
 
   nopt@7.2.1:
@@ -10044,6 +10048,13 @@ snapshots:
       libbase64: 1.3.0
       libqp: 2.1.1
 
+  libmime@5.3.8:
+    dependencies:
+      encoding-japanese: 2.2.0
+      iconv-lite: 0.7.2
+      libbase64: 1.3.0
+      libqp: 2.1.1
+
   libqp@2.1.1: {}
 
   lighthouse-logger@2.0.2:
@@ -10134,16 +10145,16 @@ snapshots:
       '@babel/types': 7.29.0
       source-map-js: 1.2.1
 
-  mailparser@3.9.6:
+  mailparser@3.9.8:
     dependencies:
       '@zone-eu/mailsplit': 5.4.8
       encoding-japanese: 2.2.0
       he: 1.2.0
       html-to-text: 9.0.5
       iconv-lite: 0.7.2
-      libmime: 5.3.7
+      libmime: 5.3.8
       linkify-it: 5.0.0
-      nodemailer: 8.0.4
+      nodemailer: 8.0.5
       punycode.js: 2.3.1
       tlds: 1.261.0
 
@@ -10481,9 +10492,9 @@ snapshots:
 
   node-releases@2.0.36: {}
 
-  nodemailer@8.0.3: {}
-
   nodemailer@8.0.4: {}
+
+  nodemailer@8.0.5: {}
 
   nopt@7.2.1:
     dependencies:
